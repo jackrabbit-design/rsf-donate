@@ -1,0 +1,772 @@
+/* ========================================================================= */
+/* !RESETS AND DEFAULTS */
+/* ========================================================================= */
+
+    html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,img,ins,kbd,q,samp,var,hr,acronym,dl,dt,dd,ol,ul,li,pre,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{border:0;outline:0;font-style:normal;font-weight:400;font-size:100%;vertical-align:baseline;margin:0;padding:0;-webkit-text-size-adjust:100%;}em,strong,b,i,a,span,sub,sup,small{border:0;outline:0;font-size:100%;vertical-align:baseline;margin:0;padding:0}a:focus{outline:0}:focus,:active{outline:none;outline:0}::-moz-focus-inner{outline:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}li{list-style:none}a{text-decoration:none}blockquote:before,blockquote:after,q:before,q:after{content:""}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border-top:1px solid #000;color:#000}input,select{vertical-align:middle;}sub{vertical-align:sub;font-size:smaller;line-height:0px}sup{vertical-align:super;font-size:smaller;line-height:0px}input,button,textarea,select,label,img{display:inline-block;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{-webkit-appearance: none;}textarea{resize:none;}button,a span{cursor:pointer}button{border:0;text-align:center;}button::-moz-focus-inner{padding:0;border:0;}table{table-layout:fixed;}a[href^=tel]{ color:inherit;}
+    #no_ie6 { width: 100%; height: 40px; overflow: hidden; border-bottom: 2px solid #000; }
+    /* != FONT SMOOTHING */ body,input,button,textarea{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;}
+    /* * { box-sizing: border-box;} */
+    /* != .clearfix - CLEAR ELEMENTS */ .clear{clear: both;} .clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;} .clearfix{display:inline-table;} * html .clearfix{height:1%;}/* Hides from IE-mac \*/ .clearfix{display:block;}/* Hides from IE-mac \*/ * html .clearfix{zoom:1;}/* IE6 */ *:first-child+html .clearfix{zoom:1;}/* IE7 */
+    /* != .wordwrap - CONTINUE LONG URLS/WORDS ON NEXT LINE */ .wordwrap{white-space:pre;white-space:pre-wrap;white-space:pre-line;white-space:-pre-wrap;white-space:-o-pre-wrap;white-space:-moz-pre-wrap;word-wrap:break-word;}
+    * { box-sizing:border-box; }
+
+/* ========================================================================= */
+/* !FONTS (@fontface generated with FontSpring Syntax formatting */
+/* ========================================================================= */
+
+    @font-face { font-family: "jack-social";
+        src:url("../fonts/JackSocial/jack-social.eot");
+        src:url("../fonts/JackSocial/jack-social.eot?#iefix") format("embedded-opentype"), url("../fonts/JackSocial/jack-social.ttf") format("truetype"), url("../fonts/JackSocial/jack-social.woff") format("woff"), url("../fonts/JackSocial/jack-social.svg#jack-social") format("svg");
+        font-weight: normal; font-style: normal;
+    }
+
+/* != DejaVu Serif ====================================== */
+
+	@font-face { font-family: 'DejaVuSerif';
+		src: url('../fonts/DejaVu-Serif/DejaVuSerif-webfont.eot');
+		src: local('☺'), url('../fonts/DejaVu-Serif/DejaVuSerif-webfont.woff') format('woff'), url('../fonts/DejaVu-Serif/DejaVuSerif-webfont.ttf') format('truetype'), url('../fonts/DejaVu-Serif/DejaVuSerif-webfont.svg#webfontgRAI6HZ7') format('svg');
+        font-weight:normal; font-style:normal;
+    }
+
+	@font-face { font-family: 'DejaVuSerif';
+		src: url('../fonts/DejaVu-Serif/DejaVuSerif-Italic-webfont.eot');
+		src: local('☺'), url('../fonts/DejaVu-Serif/DejaVuSerif-Italic-webfont.woff') format('woff'), url('../fonts/DejaVu-Serif/DejaVuSerif-Italic-webfont.ttf') format('truetype'), url('../fonts/DejaVu-Serif/DejaVuSerif-Italic-webfont.svg#webfontjwmn4kIm') format('svg');
+        font-weight:normal; font-style:italic;
+    }
+
+	@font-face { font-family: 'DejaVuSerif';
+		src: url('../fonts/DejaVu-Serif/DejaVuSerif-Bold-webfont.eot');
+		src: local('☺'), url('../fonts/DejaVu-Serif/DejaVuSerif-Bold-webfont.woff') format('woff'), url('../fonts/DejaVu-Serif/DejaVuSerif-Bold-webfont.ttf') format('truetype'), url('../fonts/DejaVu-Serif/DejaVuSerif-Bold-webfont.svg#webfontkfoZZPDT') format('svg');
+        font-weight:bold; font-style:normal;
+    }
+
+	@font-face { font-family: 'DejaVuSerif';
+		src: url('../fonts/DejaVu-Serif/DejaVuSerif-BoldItalic-webfont.eot');
+		src: local('☺'), url('../fonts/DejaVu-Serif/DejaVuSerif-BoldItalic-webfont.woff') format('woff'), url('../fonts/DejaVu-Serif/DejaVuSerif-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/DejaVu-Serif/DejaVuSerif-BoldItalic-webfont.svg#webfont0r574B5J') format('svg');
+        font-weight:bold; font-style:italic;
+    }
+
+
+
+/* != League Gothic ====================================== */
+
+    @font-face {
+        font-family: 'LeagueGothic';
+        src: url('../fonts/League-Gothic/League_Gothic-webfont.eot');
+        src: url('../fonts/League-Gothic/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/League-Gothic/League_Gothic-webfont.woff') format('woff'), url('../fonts/League-Gothic/League_Gothic-webfont.ttf') format('truetype'), url('../fonts/League-Gothic/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+        font-weight: normal; font-style: normal; }
+
+
+/* != Open Sans ====================================== */
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-Light-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+        font-weight: 300; font-style: normal;}
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-LightItalic-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-LightItalic-webfont.woff') format('woff'), rl('../fonts/Open-Sans/OpenSans-LightItalic-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+        font-weight: 300; font-style: italic; }
+
+    @font-face {  font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-Regular-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+        font-weight: 400; font-style: normal; }
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-Italic-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-Italic-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-Italic-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
+        font-weight: 400; font-style: italic; }
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-Semibold-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-Semibold-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+        font-weight: 500; font-style: normal; }
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-SemiboldItalic-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-SemiboldItalic-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+        font-weight: 500; font-style: italic; }
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-Bold-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+        font-weight: 600; font-style: normal; }
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-BoldItalic-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-BoldItalic-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+        font-weight: 600; font-style: italic; }
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-ExtraBold-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-ExtraBold-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-ExtraBold-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+        font-weight: 700;  font-style: normal; }
+
+    @font-face { font-family: 'OpenSans';
+        src: url('../fonts/Open-Sans/OpenSans-ExtraBoldItalic-webfont.eot');
+        src: url('../fonts/Open-Sans/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'), url('../fonts/Open-Sans/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'), url('../fonts/Open-Sans/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+        font-weight: 700; font-style: italic; }
+
+/* ========================================================================= */
+/* !SASS VARIABLES & MIXINS */
+/* ========================================================================= */
+
+    @mixin size($w, $h: $w) { width: $w; height: $h; }
+
+/* ========================================================================= */
+/* !STYLES */
+/* ========================================================================= */
+
+	html, body {
+        background:#102547 url(../images/bg.png) no-repeat center top / contain;
+        background-attachment: fixed;
+        color:#717171;
+        font-family:'OpenSans',Arial,sans-serif;;
+    }
+
+/* != SELECTION STYLES (Leaving these blank will show no indication of text selection) ===== */
+/*
+    ::selection         { background: #aaa; color: #fff; }
+    ::-moz-selection    { background: #aaa; color: #fff; }
+    ::-webkit-selection { background: #aaa; color: #fff; }
+*/
+
+/* != ICON FONT DECLARATION ===== */
+
+    [data-icon]:before { font-family: "jack-social"; content: attr(data-icon); font-style: normal; font-weight: normal; font-variant: normal; text-transform: none !important; speak: none; display: inline-block; text-decoration: none; width: 1em; line-height: 1em; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    [class^="social-"]:before,
+    [class*=" social-"]:before { font-family: "jack-social"; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none !important; speak: none; display: inline-block; text-decoration: none; width: 1em; line-height: 1em; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .social-email:before { content: "a"; }
+    .social-email-round:before { content: "A"; }
+    .social-facebook:before { content: "f"; }
+    .social-facebook-round:before { content: "F"; }
+    .social-flickr:before { content: "c"; }
+    .social-flickr-round:before { content: "C"; }
+    .social-googleplus:before { content: "g"; }
+    .social-googleplus-round:before { content: "G"; }
+    .social-instagram:before { content: "i"; }
+    .social-instagram-round:before { content: "I"; }
+    .social-linkedin:before { content: "l"; }
+    .social-linkedin-round:before { content: "L"; }
+    .social-pinterest:before { content: "p"; }
+    .social-pinterest-round:before { content: "P"; }
+    .social-rss:before { content: "r"; }
+    .social-rss-round:before { content: "R"; }
+    .social-sharethis:before { content: "s"; }
+    .social-sharethis-round:before { content: "S"; }
+    .social-twitter:before { content: "t"; }
+    .social-twitter-round:before { content: "T"; }
+    .social-vimeo:before { content: "v"; }
+    .social-vimeo-round:before { content: "V"; }
+    .social-yelp:before { content: "x"; }
+    .social-yelp-round:before { content: "X"; }
+    .social-youtube:before { content: "y"; }
+    .social-youtube-round:before { content: "Y"; }
+    .social-youtube2:before { content: "u"; }
+    .social-youtube2-round:before { content: "U"; }
+
+/* != DEFAULT WORDPRESS STYLES = USE AS NEEDED = .wp-caption = .wp-caption-dd = .wpGallery = .shutter = .shutterset ==== */
+
+    .aligncenter { display: block; margin: 25px auto; }
+    .alignleft { float: left; margin: 0 25px 25px 0; }
+    .alignright { float: right; margin: 0 0 25px 25px; }
+    .alignnone { display: inline-block; }
+
+/* != LAYOUT STYLES ===== */
+
+
+    .content-main ul { }
+    .content-main ul li { position: relative; padding-left: 10px; }
+    .content-main ul li:before { content: '•'; position: absolute; left: 0; }
+    .content-main ol { counter-reset:li;}
+    .content-main ol li { position: relative; padding-left: 20px; }
+    .content-main ol li:before { content:counter(li) '. '; counter-increment: li; position: absolute; left: 0; }
+
+    .wrap { width: 1100px; box-sizing: border-box; margin: 0 auto; max-width: 100%; padding: 0 20px; }
+
+
+    #logo {
+        width:148px;
+        height:auto;
+        margin:19px auto 7px;
+        display:block;
+    }
+    img {
+        max-width:100%;
+    }
+
+    h1 {
+        font:65px/1.25 'LeagueGothic';
+        color:#fff;
+        text-align:center;
+        text-transform:
+        uppercase;
+    }
+
+    #main {
+        max-width: 600px;
+        margin:0 auto;
+        border-top:2px solid #E41C39;
+        border-bottom:22px solid #E41C39;
+        padding:33px 20px 107px 22px;
+        margin-top:14px;
+        background:#fff;
+        p.header {
+            font-size:16px;
+            line-height:1.625;
+        }
+    }
+
+    #donate {
+        margin-top:33px;
+        label {
+            position:relative;
+            display:block;
+            color:#102547;
+            font-size:14px;
+            line-height:1.35;
+            font-weight:600;
+            max-width:230px;
+            &.short {
+                line-height:40px;
+            }
+        }
+        .tooltip {
+            position:absolute;
+            top:11px;
+            right:-22px;
+            @include size(16px);
+            background:#b4b4b4;
+            border-radius:100%;
+            color:#fff;
+            line-height:16px;
+            text-align:center;
+            font:bold 12px/16px DejaVuSerif;
+            transition:background 0.2s;
+            span {
+                opacity:0;
+                transition:opacity 0.2s;
+                pointer-events:none;
+                padding:17px 24px;
+                background:#102547;
+                border-radius:3px;
+                font:500 13px/18px OpenSans;
+                color:#fff;
+                margin-top:14px;
+                position:relative;
+                z-index:150;
+                display:block;
+                width:240px;
+                margin-left:-112px;
+                &:before {
+                    content:'';
+                    border:8px solid transparent;
+                    border-bottom-color:#102547;
+                    position:absolute;
+                    left:50%;
+                    margin-left:-8px;
+                    top:-16px;
+                }
+            }
+            &:hover {
+                background:#102547;
+                span {
+                    opacity:1;
+                }
+            }
+        }
+        input[type=text], input[type=email], input[type=phone]{
+            width:100%;
+            height:40px;
+            line-height:40px;
+            border-radius:3px;
+            border:1px solid #CCCCCC;
+            font-size:14px;
+            color:#717171;
+            padding:0 14px;
+            &:hover, &:focus {
+                border-color:#aaa;
+            }
+        }
+        .field {
+            padding-bottom:24px;
+            position:relative;
+        }
+        .half {
+            width:48.5%;
+            label {
+                margin-bottom:10px;
+            }
+            &.left {
+                float:left;
+                clear:both;
+            }
+            &.right {
+                float:right;
+                clear:right;
+            }
+        }
+        .floaty {
+            label {
+                float:left;
+                vertical-align: top;
+            }
+            input, .select-menu, input[type=radio] + label {
+                width:48.5%;
+                float:right;
+                margin-left:3.5%;
+            }
+        }
+        hr {
+            clear:both;
+            border-color:#D8D8D8;
+            &+.field {
+                margin-top:28px;
+            }
+        }
+        p.honormem {
+            padding:25px 0 14px;
+            font-size:14px;
+            line-height:1.57;
+            b {
+                font-weight:600;
+            }
+        }
+        .date+span {
+            position:absolute;
+            right:13px;
+            top:11px;
+            content:'';
+            @include size(16px);
+            background:url(../images/cal-icon.png) no-repeat center center;
+            background-size:16px;
+            display:block;
+            pointer-events: none;
+        }
+        .date:hover + span {
+            background-image:url(../images/cal-hover.png)
+        }
+        input[type=radio] {
+            display:none;
+            &+label {
+                margin-left:0 !important;
+                margin-bottom:11px;
+                clear:right;
+                max-width:none;
+                color:#717171;
+                font-weight:400;
+                padding:0 0 0 28px;
+                position: relative;
+                &:before {
+                    content:'';
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    @include size(18px);
+                    background:#102547;
+                    border-radius:100%;
+                    box-shadow:0 0 0 1px #979797 inset, 0 0 0 10px #fff inset;
+                    transition:box-shadow 0.2s;
+                }
+            }
+            &:checked + label:before {
+                box-shadow:0 0 0 1px #979797 inset, 0 0 0 4px #fff inset;
+            }
+        }
+        button[type=submit] {
+            width:120px;
+            height:40px;
+            line-height:40px;
+            background-color:#E41C39;
+            color:#fff;
+            text-transform:uppercase;
+            text-align:center;
+            font-size:14px;
+            font-weight:600;
+            border-radius:3px;
+            margin-top:30px;
+            transition:background 0.2s;
+            &:hover {
+                background-color:#b9182f;
+            }
+        }
+        button[type=reset]{
+            line-height:40px;
+            color:#717171;
+            margin-left:20px;
+            font-size:14px;
+            background:none;
+        }
+        input.amt {
+            padding-left:26px;
+            background:url(../images/dollar.png) no-repeat 12px 9px;
+            background-size:10px auto;
+        }
+        .hide {
+            display:none;
+        }
+        label.error {
+            padding:17px 24px;
+            background:#E41C39;
+            border-radius:3px;
+            font:500 13px/18px OpenSans;
+            color:#fff;
+            margin-top:14px;
+            position:relative;
+            z-index:150;
+            &:before {
+                content:'';
+                border:8px solid transparent;
+                border-bottom-color:#E41C39;
+                position:absolute;
+                left:50%;
+                margin-left:-8px;
+                top:-16px;
+            }
+        }
+        .half {
+            label.error {
+                width:100%;
+                max-width:none;
+            }
+        }
+        .floaty {
+            label.error {
+                width:48.5%;
+                max-width:none;
+                left:51.5%;
+                top:0;
+            }
+            .select-menu label.error {
+                width:100%;
+                left:0;
+            }
+        }
+    }
+
+    .toggle { display:none;
+        & + .toggler {
+            float:right !important;
+            cursor:pointer;
+            transition: background 0.2s;
+            @include size(112px,38px);
+            box-shadow:inset 0 0 0 1px rgba(61,61,61,0.3), inset 0 2px 0 rgba(61,61,61,0.3);
+            background:#E41C39;
+            border-radius:3px;
+            padding:6px;
+            position:relative;
+            &:before, &:after {
+                font:600 16px/26px OpenSans;
+                color:#fff;
+                position:absolute;
+                top:5px;
+                z-index:1;
+            }
+            &:before {
+                content:"NO";
+                left:18px;
+            }
+            &:after {
+                content:"YES";
+                right:15px;
+            }
+            span {
+                @include size(48px,26px);
+                display:block;
+                box-shadow:0 2px 0 rgba(61,61,61,0.3), inset 0 2px 0 #fff;
+                background-color:#F7F7F7;
+                border-radius:3px;
+                position:relative;
+                z-index:50;
+                left:54px;
+                transition:left 0.2s;
+                &:before {
+                    content:'';
+                    display:block;
+                    @include size(8px,10px);
+                    border-left:2px solid #d0d0d0;
+                    border-right:2px solid #d0d0d0;
+                    position:absolute;
+                    top:8px;
+                    left:18px;
+                }
+                &:after {
+                    content:'';
+                    display:block;
+                    @include size(2px,10px);
+                    background: #d0d0d0;
+                    position:absolute;
+                    top:8px;
+                    left:23px;
+                }
+            }
+        }
+        &:checked + .toggler {
+            background:#4DCE5B;
+            span {
+                left: 0px;
+            }
+        }
+    }
+
+    .select-menu {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #CCCCCC;
+        border-radius: 3px;
+        vertical-align: middle;
+        display: inline-block;
+        //overflow: hidden;
+        &:before {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 16px;
+            width:11px;
+            height:7px;
+            background:url(../images/arrow.png) no-repeat center center;
+            background-size:11px 7px;
+            z-index: 10;
+            pointer-events: none;
+        }
+        &:hover {
+            border-color: #aaa;
+        }
+        select {
+            padding:0 40px 0 14px;
+            vertical-align: top;
+            color: #5f5f5f;
+            font-size: 15px;
+            font-weight: 400;
+            width: 100%;
+            line-height: 38px;
+            border: 0;
+            border-radius: 3px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            text-indent: 0.01px;
+            text-overflow: '';
+            position: relative;
+            z-index: 1;
+            height:38px;
+            background:#fff;
+        }
+        & select::-ms-expand {
+            display: none;
+        }
+        & select:-moz-focusring {
+            color: transparent; text-shadow: 0 0 0 #707070;
+        }
+    }
+
+    #footer {
+        text-align:center;
+        margin-top:-103px;
+        padding-bottom:60px;
+        h2 {
+            font:bold 18px/1 DejaVuSerif;
+            color:#fff;
+            text-transform:uppercase;
+            small {
+                font-size:10px;
+                display:block;
+                margin-bottom:4px;
+            }
+        }
+        .mission {
+            display:block;
+            margin:0 auto;
+            text-transform: uppercase;
+            margin-top:11px;
+            width:182px;
+            height:34px;
+            background:#0C1A32;
+            border:1px solid #2B4268;
+            border-radius:3;
+            font:bold 11px/32px DejaVuSerif;
+            color:#7E9BCA;
+            &:hover {
+                background:#091529;
+            }
+        }
+    }
+
+/* != PLACEHOLDER ATTRIBUTE STYLES = input or textarea - placeholder="whatever" ===== */
+/*
+    ::-webkit-input-placeholder { color: #aaa; }
+    :-moz-placeholder           { color: #aaa; }
+*/
+
+    form ul { margin: 0;
+        li { background: none; list-style: none;
+            div { display: inline-block; vertical-align: top; }
+        }
+    }
+
+    input {
+        &[type=text], &[type=password], &[type=url], &[type=email] {  }
+    }
+
+    input[type=submit], button { display: inline-block; cursor: pointer;
+        &:hover {  }
+    }
+
+
+    /*! jQuery UI - v1.11.4 - 2015-11-17
+    * http://jqueryui.com
+    * Includes: core.css, datepicker.css
+    * Copyright jQuery Foundation and other contributors; Licensed MIT */
+
+    .ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}.ui-front{z-index:100}.ui-state-disabled{cursor:default!important}.ui-icon{display:block;text-indent:-99999px;overflow:hidden;background-repeat:no-repeat}.ui-widget-overlay{position:fixed;top:0;left:0;width:100%;height:100%}.ui-datepicker{width:17em;padding:.2em .2em 0;display:none}.ui-datepicker .ui-datepicker-header{position:relative;padding:.2em 0}.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{position:absolute;top:2px;width:1.8em;height:1.8em}.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover{top:1px}.ui-datepicker .ui-datepicker-prev{left:2px}.ui-datepicker .ui-datepicker-next{right:2px}.ui-datepicker .ui-datepicker-prev-hover{left:1px}.ui-datepicker .ui-datepicker-next-hover{right:1px}.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span{display:block;position:absolute;left:50%;margin-left:-8px;top:50%;margin-top:-8px}.ui-datepicker .ui-datepicker-title{margin:0 2.3em;line-height:1.8em;text-align:center}.ui-datepicker .ui-datepicker-title select{font-size:1em;margin:1px 0}.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year{width:45%}.ui-datepicker table{width:100%;font-size:.9em;border-collapse:collapse;margin:0 0 .4em}.ui-datepicker th{padding:.7em .3em;text-align:center;font-weight:bold;border:0}.ui-datepicker td{border:0;padding:1px}.ui-datepicker td span,.ui-datepicker td a{display:block;padding:.2em;text-align:right;text-decoration:none}.ui-datepicker .ui-datepicker-buttonpane{background-image:none;margin:.7em 0 0 0;padding:0 .2em;border-left:0;border-right:0;border-bottom:0}.ui-datepicker .ui-datepicker-buttonpane button{float:right;margin:.5em .2em .4em;cursor:pointer;padding:.2em .6em .3em .6em;width:auto;overflow:visible}.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{float:left}.ui-datepicker.ui-datepicker-multi{width:auto}.ui-datepicker-multi .ui-datepicker-group{float:left}.ui-datepicker-multi .ui-datepicker-group table{width:95%;margin:0 auto .4em}.ui-datepicker-multi-2 .ui-datepicker-group{width:50%}.ui-datepicker-multi-3 .ui-datepicker-group{width:33.3%}.ui-datepicker-multi-4 .ui-datepicker-group{width:25%}.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header{border-left-width:0}.ui-datepicker-multi .ui-datepicker-buttonpane{clear:left}.ui-datepicker-row-break{clear:both;width:100%;font-size:0}.ui-datepicker-rtl{direction:rtl}.ui-datepicker-rtl .ui-datepicker-prev{right:2px;left:auto}.ui-datepicker-rtl .ui-datepicker-next{left:2px;right:auto}.ui-datepicker-rtl .ui-datepicker-prev:hover{right:1px;left:auto}.ui-datepicker-rtl .ui-datepicker-next:hover{left:1px;right:auto}.ui-datepicker-rtl .ui-datepicker-buttonpane{clear:right}.ui-datepicker-rtl .ui-datepicker-buttonpane button{float:left}.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,.ui-datepicker-rtl .ui-datepicker-group{float:right}.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header{border-right-width:0;border-left-width:1px}
+
+    /*! jQuery UI - v1.11.4 - 2015-11-15
+* http://jqueryui.com
+* Copyright jQuery Foundation and other contributors; Licensed MIT */
+
+.ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}.ui-front{z-index:100}.ui-state-disabled{cursor:default!important}.ui-icon{display:block;text-indent:-99999px;overflow:hidden;background-repeat:no-repeat}.ui-widget-overlay{position:fixed;top:0;left:0;width:100%;height:100%}.ui-datepicker{width:17em;padding:.2em .2em 0;display:none}.ui-datepicker .ui-datepicker-header{position:relative;padding:.2em 0}.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{position:absolute;top:2px;width:1.8em;height:1.8em}.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover{top:1px}.ui-datepicker .ui-datepicker-prev{left:2px}.ui-datepicker .ui-datepicker-next{right:2px}.ui-datepicker .ui-datepicker-prev-hover{left:1px}.ui-datepicker .ui-datepicker-next-hover{right:1px}.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span{display:block;position:absolute;left:50%;margin-left:-8px;top:50%;margin-top:-8px}.ui-datepicker .ui-datepicker-title{margin:0 2.3em;line-height:1.8em;text-align:center}.ui-datepicker .ui-datepicker-title select{font-size:1em;margin:1px 0}.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year{width:45%}.ui-datepicker table{width:100%;font-size:.9em;border-collapse:collapse;margin:0 0 .4em}.ui-datepicker th{padding:.7em .3em;text-align:center;font-weight:bold;border:0}.ui-datepicker td{border:0;padding:1px}.ui-datepicker td span,.ui-datepicker td a{display:block;padding:.2em;text-align:right;text-decoration:none}.ui-datepicker .ui-datepicker-buttonpane{background-image:none;margin:.7em 0 0 0;padding:0 .2em;border-left:0;border-right:0;border-bottom:0}.ui-datepicker .ui-datepicker-buttonpane button{float:right;margin:.5em .2em .4em;cursor:pointer;padding:.2em .6em .3em .6em;width:auto;overflow:visible}.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{float:left}.ui-datepicker.ui-datepicker-multi{width:auto}.ui-datepicker-multi .ui-datepicker-group{float:left}.ui-datepicker-multi .ui-datepicker-group table{width:95%;margin:0 auto .4em}.ui-datepicker-multi-2 .ui-datepicker-group{width:50%}.ui-datepicker-multi-3 .ui-datepicker-group{width:33.3%}.ui-datepicker-multi-4 .ui-datepicker-group{width:25%}.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header{border-left-width:0}.ui-datepicker-multi .ui-datepicker-buttonpane{clear:left}.ui-datepicker-row-break{clear:both;width:100%;font-size:0}.ui-datepicker-rtl{direction:rtl}.ui-datepicker-rtl .ui-datepicker-prev{right:2px;left:auto}.ui-datepicker-rtl .ui-datepicker-next{left:2px;right:auto}.ui-datepicker-rtl .ui-datepicker-prev:hover{right:1px;left:auto}.ui-datepicker-rtl .ui-datepicker-next:hover{left:1px;right:auto}.ui-datepicker-rtl .ui-datepicker-buttonpane{clear:right}.ui-datepicker-rtl .ui-datepicker-buttonpane button{float:left}.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,.ui-datepicker-rtl .ui-datepicker-group{float:right}.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header{border-right-width:0;border-left-width:1px}
+
+    #ui-datepicker-div {
+        background:#fff;
+        border-radius:3px;
+        z-index:500 !important;
+        width:270px;
+        font-size:12px !important;
+        padding:0;
+        box-shadow:0 2px 20px rgba(0,0,0,0.25);
+        &:before {
+            display:block;
+            content:'';
+            position:absolute;
+            border:8px solid transparent;
+            border-bottom-color:#E41C39;
+            top:-15px;
+            right:12px;
+            z-index: 100;
+            width:0;
+            height:0;
+        }
+    }
+    .ui-datepicker-header {
+        padding:0 !important;;
+        background:#E41C39;
+        color:#fff;
+        border-radius:3px 3px 0 0;
+        text-transform: uppercase;
+        height:38px;
+        .ui-datepicker-title {
+            font:600 12px/38px OpenSans !important;;
+        }
+    }
+    .ui-datepicker-next, .ui-datepicker-prev {
+        background-size:7px auto;
+        background-repeat:no-repeat;
+        top:0px !important;
+        height:38px !important;
+        width:38px !important;;
+        background-position:center center;
+        cursor: pointer;
+        &:hover {
+            background-color:rgba(0,0,0,0.1);
+        }
+    }
+    .ui-datepicker-prev {
+        background-image:url(../images/cal-prev.png);
+        left:0 !important;
+    }
+    .ui-datepicker-next {
+        background-image:url(../images/cal-next.png);
+        right:0 !important;
+    }
+
+    .ui-datepicker-calendar {
+        th {
+            color:#102547;
+            font-weight:600;
+            line-height:30px;
+            padding:0;
+        }
+        td {
+            padding:3px 5px;
+        }
+        td span, td a {
+            text-align:center;
+            font-weight:600;
+            text-align:center;
+            color:#717171;
+            font-weight:600;
+            line-height:27px;
+            padding:0;
+        }
+        td a:hover {
+            color:#102547;
+        }
+        td span {
+            color:#CCCCCC;
+        }
+        td.ui-datepicker-today a {
+            color:#E41C39;
+        }
+        td.ui-datepicker-current-day a {
+            background:#E41C39;
+            color:#fff;
+        }
+    }
+
+/* ========================================================================= */
+/* !MEDIA QUERIES */
+/* ========================================================================= */
+
+/* @media screen and (max-width: XXXpx) {  } */
+
+
+@media screen and (max-width:500px){
+
+    h1 {
+        font-size:40px;
+    }
+    #donate {
+        .half {
+            width:100%; float:none !important;
+        }
+        .field {
+            padding-bottom:16px;
+        }
+        label {
+            margin-bottom:9px !important;
+            max-width:none;
+            &.short {
+                line-height:1.35;
+            }
+        }
+        .floaty {
+            label {
+                float:none;
+            }
+            input, .select-menu, input[type=radio] + label {
+                width:100%;
+                float:none;
+                margin-left:0;
+            }
+        }
+        .date + span {
+            top:39px;
+
+        }
+        button[type="submit"], button[type="reset"] {
+            width:100%;
+        }
+        button[type="reset"] {
+            margin:20px 0 0;
+        }
+    }
+    .toggle + .toggler {
+        float:none !important;
+    }
+
+}
