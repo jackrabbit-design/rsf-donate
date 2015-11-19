@@ -152,10 +152,8 @@ jQuery(function($){
         var nw = $("body").scrollTop();
         var n = (nm > nw ? nm : nw);
 
-        var t = Math.ceil(n * -0.3);
-
         $('body').css({
-            'background-position' : 'center ' + t + 'px'
+            'background-position' : 'center ' + n * -0.3 + 'px'
         });
 
         // if transform3d isn't available, use top over background-position

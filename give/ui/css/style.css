@@ -1743,12 +1743,4 @@ input[type=submit], button {
   .toggle + .toggler {
     float: none !important;
   }
-  #review {
-    position: relative;
-    left: -20px;
-    width: calc(100% + 42px);
-  }
-  #review li span {
-    width: 100%;
-  }
 }
