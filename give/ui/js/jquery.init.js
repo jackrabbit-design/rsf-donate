@@ -4,10 +4,12 @@
 
 jQuery(function($){
 
+    $('.popup').magnificPopup({type:'image'});
+
     $('#startdate').datepicker({
         minDate: 0,
         beforeShow: function(textbox, instance) {
-            $(this).datepicker('option', 'maxDate', $('#enddate').val());
+            // $(this).datepicker('option', 'maxDate', $('#enddate').val());
             var txtBoxOffset = $(this).offset();
             var txtBoxOffset = $(this).offset();
             var top = txtBoxOffset.top;
@@ -17,9 +19,10 @@ jQuery(function($){
                     top: top + 48 //you can adjust this value accordingly
                 });
             }, 0);
-        }
+        },
+        dateFormat: "MM d, yy"
     });
-    $('#enddate').datepicker({
+/*    $('#enddate').datepicker({
         defaultDate: "+1w",
         beforeShow: function(textbox,instance) {
             $(this).datepicker('option', 'minDate', $('#startdate').val());
@@ -35,8 +38,10 @@ jQuery(function($){
                     top: top + 48 //you can adjust this value accordingly
                 });
             }, 0);
-        }
+        },
+        dateFormat: "MM d, yy"
     });
+*/
 
     $('select#honor').change(function(){
         var v = $(this).val();
@@ -60,6 +65,23 @@ jQuery(function($){
         }else{
             $('.recuryes').slideUp(200).children('input').val('');
             $('.recurno').slideDown(200);
+        }
+    });
+
+    $('select#programevent').change(function(){
+        if($(this).val() == 'Other'){
+            $('.other').slideDown(200);
+        }else{
+            $('.other').slideUp(200).children('input').val('');;
+
+        }
+    });
+
+    $('input#donationamt, input#installmentamt').on('keyup',function(){
+        if($(this).val() >= 50){
+            $('.shirt').slideDown(200);
+        }else{
+            $('.shirt').slideUp(200);
         }
     });
 
@@ -135,13 +157,27 @@ jQuery(function($){
                 },
                 dpDate: true
             },
-            enddate: {
+            /*enddate: {
                 required: {
                     depends: function(element){
                         return $('input#recurring').is(':checked');
                     }
                 },
                 dpDate: true
+            }*/
+            installments: {
+                required: {
+                    depends: function(element){
+                        return $('input#recurring').is(':checked');
+                    }
+                }
+            },
+            shirtsize: {
+                required: {
+                    depends: function(){
+                        return $('input#donationamt').val() >= 50 || $('input#installmentamt').val() >= 50;
+                    }
+                }
             }
         }
     })
@@ -152,10 +188,8 @@ jQuery(function($){
         var nw = $("body").scrollTop();
         var n = (nm > nw ? nm : nw);
 
-        var t = Math.ceil(n * -0.3);
-
         $('body').css({
-            'background-position' : 'center ' + t + 'px'
+            'background-position' : 'center ' + n * -0.3 + 'px'
         });
 
         // if transform3d isn't available, use top over background-position

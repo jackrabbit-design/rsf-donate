@@ -188,41 +188,58 @@
                         <?php $signed .= 'recurring_start_date,' ?>
                     </li>
                     <li>
-                        <span>Number of Installments</span>
+                        <span>Date of Last Donation</span>
+                        <p><?php echo $enddate;
+                            $end_old = strtotime($enddate);
+                            $diff = $end_old - $start_old;
+                            $days = floor($diff / 60 / 60 / 24);
+                            $semiMonthly = floor($days / 15);
+                            $monthly = floor($days / 30);
+                            $quarterly = floor($days / 91);
+                            $annually = floor($days / 365);
+                            ?></p>
+                    </li>
+                    <li>
+                        <span>Recurring Donation Recap</span>
                         <?php switch($frequency){
-                            case 'bi-weekly':
-                                if($installments > 130) {
-                                    $installments = 130;
+                            case 'semi-monthly':
+                                if($semiMonthly <= 24){
+                                    $numDonations = $semiMonthly;
+                                }else{
+                                    $numDonations = 24;
                                     $max = true;
                                 }
                             break;
                             case 'monthly':
-                                if($installments > 60){
-                                    $installments = 60;
+                                if($monthly <= 60){
+                                    $numDonations = $monthly;
+                                }else{
+                                    $numDonations = 60;
                                     $max = true;
                                 }
                             break;
                             case 'quarterly':
-                                if($installments > 20){
-                                    $installments = 20;
+                                if($quarterly <= 20){
+                                    $numDonations = $quarterly;
+                                }else{
+                                    $numDonations = 20;
                                     $max = true;
                                 }
                             break;
                             case 'annually':
-                                if($installments > 5){
-                                    $installments = 5;
-                                    $max=true;
+                                if($annually <= 5){
+                                    $numDonations = $annually;
+                                }else{
+                                    $numDonations = 5;
+                                    $max = true;
                                 }
                             break;
-                        }; ?>
-                        <p><?php echo $installments . ($max ? ' (maximum)' : ''); ?></p>
-                        <input type="hidden" name="recurring_number_of_installments" value="<?php echo $installments ?>" />
+                        };
+                        if($numDonations == 0) $numDonations = 1;
+                        $total = $numDonations * $installmentamt; ?>
+                        <p>Based on your donation, you will be making <b><?php echo $numDonations ?></b> payments <?php echo ($max ? '(maximum)' : ''); ?> of <b>$<?php echo $installmentamt; ?></b>, for a total of <b>$<?php echo $total; ?></b></p>
+                        <input type="hidden" name="recurring_number_of_installments" value="<?php echo $numDonations ?>" />
                         <?php $signed .= 'recurring_number_of_installments,' ?>
-                    </li>
-                    <li>
-                        <span>Recurring Donation Recap</span>
-                        <?php $total = $installments * $installmentamt; ?>
-                        <p>Based on your donation, you will be making <b><?php echo $installments . ' ' . $frequency ?></b> payments <?php echo ($max ? '(maximum)' : ''); ?> of <b>$<?php echo $installmentamt; ?></b>, for a total of <b>$<?php echo $total; ?></b></p>
                     </li>
                 <?php }else{ // if one-time donation ?>
                     <li>
