@@ -39,7 +39,7 @@
         <h3>Confirm Donation</h3>
         <p>Please review the following information for accuracy:</p>
 
-        <form id="donate" action="send.php" method="post">
+        <form id="donate-review" action="send.php" method="post">
 
             <ul id="review">
                 <?php if($fname){ ?>
@@ -219,11 +219,15 @@
                         <input type="hidden" name="recurring_number_of_installments" value="<?php echo $installments ?>" />
                         <?php $signed .= 'recurring_number_of_installments,' ?>
                     </li>
-                    <li>
+                    <!--<li>
                         <span>Recurring Donation Recap</span>
                         <?php $total = $installments * $installmentamt; ?>
                         <p>Based on your donation, you will be making <b><?php echo $installments . ' ' . $frequency ?></b> payments <?php echo ($max ? '(maximum)' : ''); ?> of <b>$<?php echo $installmentamt; ?></b>, for a total of <b>$<?php echo $total; ?></b></p>
-                    </li>
+                        <?php $recap = "Based on your donation, you will be making {$installments} {$frequency} payments " . ($max ? '(maximum)' : '') . " of \${$installmentamt}, for a total of \${$total}"; ?>
+                        <input type="hidden" name="merchant_defined_data6" value="<?php echo $recap ?>" />
+                        <?php $unsigned .= 'merchant_defined_data6,' ?>
+                    </li>-->
+                    <input type="hidden" name="merchant_defined_data6" value="<?php echo $recap ?>" />
                 <?php }else{ // if one-time donation ?>
                     <li>
                         <span>One-Time Donation Amount</span>
@@ -242,6 +246,11 @@
 
             </ul>
 
+            <?php if($recurring){ ?>
+                <input type="checkbox" id="agree" name="merchant_defined_data_7" title="Please accept these terms." /><label for="agree">I understand that I will be making <b><?php echo $installments . ' ' . $frequency ?></b> payments <?php echo ($max ? '(maximum)' : ''); ?> of <b>$<?php echo $installmentamt; ?></b>, for a total of <b>$<?php echo $total; ?></b>. I also understand that on the following payment page, the total amount will read "$0.00"</label>
+                <?php $unsigned .= 'merchant_defined_data_7,' ?>
+            <?php } ?>
+
             <?php if($recipient && $recipient != ''){?>
                 <input type="hidden" name="payment_token_comments" value="Recipient: <?php echo $recipient; ?>" />
                 <input type="hidden" name="merchant_defined_data4" value="Recipient: <?php echo $recipient; ?>" />
@@ -252,9 +261,9 @@
                 <?php $unsigned .= 'merchant_defined_data2,' ?>
             <?php } ?>
 
-            <input type="hidden" name="reference_number" value="GIVE12345"><!-- done -->
-            <input type="hidden" name="access_key" value="34a1bc0c6c0031aaa84325614c462151"><!-- done -->
-            <input type="hidden" name="profile_id" value="FCBEDF9D-3DE0-43BB-9E7A-4E1FCCAC128F"><!-- done -->
+            <input type="hidden" name="reference_number" value="GIVE<?php echo date('ymdhis') . rand(10,99) ?>"><!-- done -->
+            <input type="hidden" name="access_key" value="ac545f586dc432ecadb0ab604a1af937"><!-- done -->
+            <input type="hidden" name="profile_id" value="4A687D2A-9B94-455A-8BBE-CFFE12BE12F7"><!-- done -->
             <input type="hidden" name="transaction_uuid" value="<?php echo uniqid() ?>">
             <input type="hidden" name="signed_field_names" value="<?php echo $signed ?>currency,access_key,profile_id,transaction_uuid,signed_date_time,locale,transaction_type,reference_number,signed_field_names,unsigned_field_names">
             <input type="hidden" name="unsigned_field_names" value="<?php echo $unsigned ?>signature">

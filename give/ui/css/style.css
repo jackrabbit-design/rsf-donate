@@ -137,46 +137,51 @@ h1 { font: 65px/1.25 'LeagueGothic'; color: #fff; text-align: center; text-trans
 #main { max-width: 600px; margin: 0 auto; border-top: 2px solid #E41C39; border-bottom: 22px solid #E41C39; padding: 33px 20px 107px 22px; margin-top: 14px; background: #fff; }
 #main p.header { font-size: 16px; line-height: 1.625; }
 
-#donate { margin-top: 33px; }
-#donate label { position: relative; display: block; color: #102547; font-size: 14px; line-height: 1.35; font-weight: 600; max-width: 230px; }
-#donate label.short { line-height: 40px; }
-#donate label a { color:#E41C39; }
-#donate .tooltip { position: absolute; top: 11px; right: -22px; width: 16px; height: 16px; background: #b4b4b4; border-radius: 100%; color: #fff; line-height: 16px; text-align: center; font: bold 12px/16px DejaVuSerif; -webkit-transition: background 0.2s; transition: background 0.2s; }
-#donate .tooltip span { opacity: 0; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; pointer-events: none; padding: 17px 24px; background: #e6e6e6; border-radius: 3px; font: 500 13px/18px OpenSans; color: #102547; margin-top: 14px; position: relative; z-index: 150; display: block; width: 300px; margin-left: -142px; }
-#donate .tooltip span:before { content: ''; border: 8px solid transparent; border-bottom-color: #e6e6e6; position: absolute; left: 50%; margin-left: -8px; top: -16px; }
-#donate .tooltip:hover { background: #102547; }
-#donate .tooltip:hover span { opacity: 1; }
-#donate input[type=text], #donate input[type=email], #donate input[type=phone] { width: 100%; height: 40px; line-height: 40px; border-radius: 3px; border: 1px solid #CCCCCC; font-size: 14px; color: #717171; padding: 0 14px; }
-#donate input[type=text]:hover, #donate input[type=text]:focus, #donate input[type=email]:hover, #donate input[type=email]:focus, #donate input[type=phone]:hover, #donate input[type=phone]:focus { border-color: #aaa; }
-#donate .field { padding-bottom: 24px; position: relative; }
-#donate .half { width: 48.5%; }
-#donate .half label { margin-bottom: 10px; }
-#donate .half.left { float: left; clear: both; }
-#donate .half.right { float: right; clear: right; }
-#donate .floaty label { float: left; vertical-align: top; }
-#donate .floaty input, #donate .floaty .select-menu, #donate .floaty input[type=radio] + label { width: 48.5%; float: right; margin-left: 3.5%; }
-#donate hr { clear: both; border-color: #D8D8D8; }
-#donate hr + .field { margin-top: 28px; }
-#donate p.honormem { padding: 25px 0 14px; font-size: 14px; line-height: 1.57; }
-#donate p.honormem b { font-weight: 600; }
-#donate .date + span { position: absolute; right: 13px; top: 11px; content: ''; width: 16px; height: 16px; background: url(../images/cal-icon.png) no-repeat center center; background-size: 16px; display: block; pointer-events: none; }
-#donate .date:hover + span { background-image: url(../images/cal-hover.png); }
-#donate input[type=radio] { display: none; }
-#donate input[type=radio] + label { margin-left: 0 !important; margin-bottom: 11px; clear: right; max-width: none; color: #717171; font-weight: 400; padding: 0 0 0 28px; position: relative; }
-#donate input[type=radio] + label:before { content: ''; position: absolute; top: 0; left: 0; width: 18px; height: 18px; background: #102547; border-radius: 100%; box-shadow: 0 0 0 1px #979797 inset, 0 0 0 10px #fff inset; -webkit-transition: box-shadow 0.2s; transition: box-shadow 0.2s; }
-#donate input[type=radio]:checked + label:before { box-shadow: 0 0 0 1px #979797 inset, 0 0 0 4px #fff inset; }
-#donate button[type=submit] { padding: 0 20px; height: 40px; line-height: 40px; background-color: #E41C39; color: #fff; text-transform: uppercase; text-align: center; font-size: 14px; font-weight: 600; border-radius: 3px; margin-top: 30px; -webkit-transition: background 0.2s; transition: background 0.2s; }
-#donate button[type=submit]:hover { background-color: #b9182f; }
-#donate button[type=submit] span { display: inline-block; width: 5px; height: 8px; background: url(../images/next.png) no-repeat center center; background-size: 5px 8px; margin-left: 8px; }
-#donate button[type=reset] { padding: 0 20px; height: 40px; line-height: 40px; background-color: #ccc; color: #fff; text-transform: uppercase; text-align: center; font-size: 14px; font-weight: 600; border-radius: 3px; margin-top: 30px; -webkit-transition: background 0.2s; transition: background 0.2s; }
-#donate button[type=reset]:hover { background-color: #bbb; }
-#donate input.amt { padding-left: 26px; background: url(../images/dollar.png) no-repeat 12px 9px; background-size: 10px auto; }
-#donate .hide { display: none; }
-#donate label.error { padding: 17px 24px; background: #E41C39; border-radius: 3px; font: 500 13px/18px OpenSans; color: #fff; margin-top: 14px; position: relative; z-index: 150; }
-#donate label.error:before { content: ''; border: 8px solid transparent; border-bottom-color: #E41C39; position: absolute; left: 50%; margin-left: -8px; top: -16px; }
-#donate .half label.error { width: 100%; max-width: none; }
-#donate .floaty label.error { width: 48.5%; max-width: none; left: 51.5%; top: 0; }
-#donate .floaty .select-menu label.error { width: 100%; left: 0; }
+form { margin-top: 33px; }
+form label { position: relative; display: block; color: #102547; font-size: 14px; line-height: 1.35; font-weight: 600; max-width: 230px; }
+form label.short { line-height: 40px; }
+form label a { color:#E41C39; }
+form .tooltip { position: absolute; top: 11px; right: -22px; width: 16px; height: 16px; background: #b4b4b4; border-radius: 100%; color: #fff; line-height: 16px; text-align: center; font: bold 12px/16px DejaVuSerif; -webkit-transition: background 0.2s; transition: background 0.2s; }
+form .tooltip span { opacity: 0; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; pointer-events: none; padding: 17px 24px; background: #e6e6e6; border-radius: 3px; font: 500 13px/18px OpenSans; color: #102547; margin-top: 14px; position: relative; z-index: 150; display: block; width: 300px; margin-left: -142px; }
+form .tooltip span:before { content: ''; border: 8px solid transparent; border-bottom-color: #e6e6e6; position: absolute; left: 50%; margin-left: -8px; top: -16px; }
+form .tooltip:hover { background: #102547; }
+form .tooltip:hover span { opacity: 1; }
+form input[type=text], form input[type=email], form input[type=phone] { width: 100%; height: 40px; line-height: 40px; border-radius: 3px; border: 1px solid #CCCCCC; font-size: 14px; color: #717171; padding: 0 14px; }
+form input[type=text]:hover, form input[type=text]:focus, form input[type=email]:hover, form input[type=email]:focus, form input[type=phone]:hover, form input[type=phone]:focus { border-color: #aaa; }
+form .field { padding-bottom: 24px; position: relative; }
+form .half { width: 48.5%; }
+form .half label { margin-bottom: 10px; }
+form .half.left { float: left; clear: both; }
+form .half.right { float: right; clear: right; }
+form .floaty label { float: left; vertical-align: top; }
+form .floaty input, form .floaty .select-menu, form .floaty input[type=radio] + label { width: 48.5%; float: right; margin-left: 3.5%; }
+form hr { clear: both; border-color: #D8D8D8; }
+form hr + .field { margin-top: 28px; }
+form p.honormem,
+    p.info-shirt { padding: 25px 0 14px; font-size: 14px; line-height: 1.57; }
+p.info-shirt { padding:16px 0 7px;; }
+form p.honormem b,
+    p.info-shirt b { font-weight: 600; }
+p.info-shirt a { color:#E41C39; }
+p.info-shirt a:hover { color:#b9182f; }
+form .date + span { position: absolute; right: 13px; top: 11px; content: ''; width: 16px; height: 16px; background: url(../images/cal-icon.png) no-repeat center center; background-size: 16px; display: block; pointer-events: none; }
+form .date:hover + span { background-image: url(../images/cal-hover.png); }
+form input[type=radio] { display: none; }
+form input[type=radio] + label { margin-left: 0 !important; margin-bottom: 11px; clear: right; max-width: none; color: #717171; font-weight: 400; padding: 0 0 0 28px; position: relative; }
+form input[type=radio] + label:before { content: ''; position: absolute; top: 0; left: 0; width: 18px; height: 18px; background: #102547; border-radius: 100%; box-shadow: 0 0 0 1px #979797 inset, 0 0 0 10px #fff inset; -webkit-transition: box-shadow 0.2s; transition: box-shadow 0.2s; }
+form input[type=radio]:checked + label:before { box-shadow: 0 0 0 1px #979797 inset, 0 0 0 4px #fff inset; }
+form button[type=submit] { padding: 0 20px; height: 40px; line-height: 40px; background-color: #E41C39; color: #fff; text-transform: uppercase; text-align: center; font-size: 14px; font-weight: 600; border-radius: 3px; margin-top: 30px; -webkit-transition: background 0.2s; transition: background 0.2s; }
+form button[type=submit]:hover { background-color: #b9182f; }
+form button[type=submit] span { display: inline-block; width: 5px; height: 8px; background: url(../images/next.png) no-repeat center center; background-size: 5px 8px; margin-left: 8px; }
+form button[type=reset] { padding: 0 20px; height: 40px; line-height: 40px; background-color: #ccc; color: #fff; text-transform: uppercase; text-align: center; font-size: 14px; font-weight: 600; border-radius: 3px; margin-top: 30px; -webkit-transition: background 0.2s; transition: background 0.2s; }
+form button[type=reset]:hover { background-color: #bbb; }
+form input.amt { padding-left: 26px; background: url(../images/dollar.png) no-repeat 12px 9px; background-size: 10px auto; }
+form .hide { display: none; }
+form label.error { padding: 17px 24px; background: #E41C39; border-radius: 3px; font: 500 13px/18px OpenSans; color: #fff; margin-top: 14px; position: relative; z-index: 150; }
+form label.error:before { content: ''; border: 8px solid transparent; border-bottom-color: #E41C39; position: absolute; left: 50%; margin-left: -8px; top: -16px; }
+form .half label.error { width: 100%; max-width: none; }
+form .floaty label.error { width: 48.5%; max-width: none; left: 51.5%; top: 0; }
+form .floaty .select-menu label.error { width: 100%; left: 0; }
 
 .toggle { display: none; }
 .toggle + .toggler { float: right !important; cursor: pointer; -webkit-transition: background 0.2s; transition: background 0.2s; width: 112px; height: 38px; box-shadow: inset 0 0 0 1px rgba(61, 61, 61, 0.3), inset 0 2px 0 rgba(61, 61, 61, 0.3); background: #E41C39; border-radius: 3px; padding: 6px; position: relative; }
@@ -195,6 +200,18 @@ h1 { font: 65px/1.25 'LeagueGothic'; color: #fff; text-align: center; text-trans
 .select-menu select { padding: 0 40px 0 14px; vertical-align: top; color: #5f5f5f; font-size: 15px; font-weight: 400; width: 100%; line-height: 38px; border: 0; border-radius: 3px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; text-indent: 0.01px; text-overflow: ''; position: relative; z-index: 1; height: 38px; background: #fff; }
 .select-menu select::-ms-expand { display: none; }
 .select-menu select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #707070; }
+
+#donate-review #agree { width:0; height:0; opacity:0; visibility:hidden; }
+#donate-review #agree + label { font-weight:400; font-size:15px; width:100%; max-width:none; padding:20px 30px 0 50px; position:relative; }
+#donate-review #agree + label:before { content:''; width:18px; height:18px; border:1px solid #979797; display:block; position:absolute; top:20px; left:20px; }
+#donate-review #agree + label:after { content:'\2714'; color:#E41C39; font-size:40px; position:absolute; top:-2px; left:21px; opacity:0; transition:opacity 0.15s; }
+#donate-review #agree:checked + label:after { opacity:1; }
+#donate-review #agree + label b { font-weight:600; }
+#donate-review #agree-error { margin-left:20px; }
+#donate-review #agree-error:before { left:12px; }
+
+.no-opacity #donate-review #agree + label:after { display:none; }
+.no-opacity #donate-review #agree:checked + label:after { display:block; }
 
 #review { margin-top: 33px; }
 #review li { padding: 12px 21px; font-size: 14px; line-height: 19px; }
@@ -343,20 +360,23 @@ input[type=submit], button { display: inline-block; cursor: pointer; }
 /* ========================================================================= */
 /* @media screen and (max-width: XXXpx) {  } */
 @media screen and (max-width: 500px) { h1 { font-size: 40px; }
-  #donate .half { width: 100%; float: none !important; }
-  #donate .field { padding-bottom: 16px; }
-  #donate label { margin-bottom: 9px !important; max-width: none; }
-  #donate label.short { line-height: 1.35; }
-  #donate .floaty label { float: none; }
-  #donate .floaty input, #donate .floaty .select-menu, #donate .floaty input[type=radio] + label { width: 100%; float: none; margin-left: 0; }
-  #donate .date + span { top: 39px; }
-  #donate button[type="submit"], #donate button[type="reset"] { width: 100%; }
-  #donate button[type="reset"] { margin: 20px 0 0; }
+  form .half { width: 100%; float: none !important; }
+  form .field { padding-bottom: 16px; }
+  form label { margin-bottom: 9px !important; max-width: none; }
+  form label.short { line-height: 1.35; }
+  form .floaty label { float: none; }
+  form .floaty input, form .floaty .select-menu, form .floaty input[type=radio] + label { width: 100%; float: none; margin-left: 0; }
+  form .date + span { top: 39px; }
+  form button[type="submit"], form button[type="reset"] { width: 100%; }
+  form button[type="reset"] { margin: 20px 0 0; }
   .toggle + .toggler { float: none !important; }
 
-    #donate .tooltip { top:0; right:0; }
-    #donate .tooltip span { margin-left:-283px; top:-3px; }
-    #donate .tooltip span:before { left:100%; margin-left:-17px; }
+    form .tooltip { top:0; right:0; }
+    form .tooltip span { margin-left:-283px; top:-3px; }
+    form .tooltip span:before { left:100%; margin-left:-17px; }
+
+    #review li span, #review li p { width:100%; }
+
 }
 
 

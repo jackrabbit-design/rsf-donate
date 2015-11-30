@@ -30,6 +30,7 @@
 
     <section id="main">
         <p class="header">We are very grateful for the generous support of thousands of fans who make the Red Sox Foundation the best team charity in all of baseball. Through your donations, we can help open the doors of opportunity for children and families through terrific nonprofit partnerships that are vital health, recreational, educational and social service programs.</p>
+        <p class="info-shirt">Each $50 or more general donation includes a <a href="ui/images/tshirt.jpg" class="popup">black tri-blend t-shirt</a> exclusively worn by Red Sox players and coaching/training staff! <strong>Note: Limit one T-shirt per person regardless of number of donation transaction during promotion.</strong></p>
 
         <form action="./review/" method="post" id="donate" class="clearfix">
             <div class="field half left">
@@ -52,7 +53,7 @@
                 <label for="programevent">Program/Event</label>
                 <span class="select-menu">
                     <select name="programevent" id="programevent">
-                        <option value="690"<?php if($source == ''){ ?> selected="selected"<?php } ?>>General RSF Programs</option>
+                        <option value="690">General RSF Programs</option>
                         <option value="RBI">RBI/Rookie Inner City Youth Baseball</option>
                         <option value="Scholars">Red Sox Scholars Program</option>
                         <option value="960">Lucchino/SoulCycle</option>
@@ -235,11 +236,10 @@
                 <input name="installments" type="text" id="installments" />
                 <span></span>
             </div>
-            <hr class="hide shirt" />
+            <!-- <hr class="hide shirt" /> -->
             <div class="field floaty clearfix hide shirt">
                 <label for="shirtsize" class="short">
-                    <div class="tooltip">?<span>Each $50 or more general donation includes a black tri-blend t-shirt exclusively worn by Red Sox players and coaching/training staff! <br/><strong>Note: Limit one T-shirt per person regardless of number of donation transaction during promotion.</strong></span></div>
-                    T-Shirt Size <a href="ui/images/tshirt.jpg" class="popup">(view)</a>
+                    T-Shirt Size
                 </label>
                 <span class="select-menu">
                     <select name="shirtsize" id="shirtsize">

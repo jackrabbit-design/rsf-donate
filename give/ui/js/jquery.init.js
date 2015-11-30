@@ -180,7 +180,21 @@ jQuery(function($){
                 }
             }
         }
-    })
+    });
+
+    $('#donate-review').validate({
+        submitHandler: function(form) {
+            form.submit();
+        },
+        errorPlacement: function(error, element) {
+            error.insertAfter(element.next());
+        },
+        rules: {
+            agree: {
+                required: true
+            }
+        }
+    });
 
     // PARALLAX
     $(document).scroll(function(){
